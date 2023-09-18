@@ -8,7 +8,6 @@ twitter_username: DojoConJapan
 github_username:  coderdojo-japan
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
 
