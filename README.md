@@ -1,2 +1,19 @@
-# dojocon.coderdojo.jp
-List of DojoCon Japan conferences.
+# DojoCon Japan 一覧
+
+DojoCon Japan の公式サイト一覧です。
+
+
+## Copyright
+
+以下のテーマを購入し、使用しています。
+
+- Theme:「ORION」(Version: 3.2.4)
+- Author: [Design Plus](http://design-plus1.com/tcd-w/)
+- 利用規約: [https://design-plus1.com/tcd-w/license_standard](https://design-plus1.com/tcd-w/license_standard)
+- 購入記録: [coderdojo-japan/decadojo/img/orion_purchase_license.png](https://github.com/coderdojo-japan/decadojo/blob/main/img/orion_purchase_license.png)
+
+各サムネイル画像は、DojoCon Japan 実行委員会の著作物となります。
+
+-----
+
+Copyright ©  DojoCon Japan 実行委員会 & 一般社団法人 CoderDojo Japan ([@coderdojo-japan](https://github.com/coderdojo-japan)).
