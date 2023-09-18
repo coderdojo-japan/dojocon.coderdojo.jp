@@ -1,0 +1,24 @@
+title: DojoCon Japan 一覧
+#email: your-email@example.com
+description: >-
+  年度別の DojoCon Japan 一覧ページです。
+baseurl: '' # the subpath of your site, e.g. /blog
+url:     'https://dojocon.coderdojo.jp'
+twitter_username: DojoConJapan
+github_username:  coderdojo-japan
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

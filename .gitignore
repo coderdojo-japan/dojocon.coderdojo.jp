@@ -1,3 +1,11 @@
+# Ignore files for Jekyll
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+
+# Ignore files for Ruby
 *.gem
 *.rbc
 /.config
