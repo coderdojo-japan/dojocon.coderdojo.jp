@@ -17,7 +17,7 @@
     <meta property="og:title"        content="{{ site.title }}" />
     <meta property="og:description"  content="{{ site.description }}" />
     <meta property="og:url"          content="{{ site.url }}">
-    <meta property="og:image"        content="{{ site.url }}/img/ogp.jpg">
+    <meta property="og:image"        content="{{ site.url }}/img/cover.jpg">
     <meta property="fb:admins"       content="715330868" />
     <meta property="fb:app_id"       content="805184859580207" />
 
@@ -175,7 +175,7 @@
 	</div>
 
 	<div class="index_content2">
-	  <img src="/img/ogp.jpg" title="DecaDojo Cover Photo" alt="DecaDojo Cover Photo" />
+	  <img src="/img/cover-photo.jpg" title="DojoCon Japan Cover Photo" alt="DojoCon Japan Cover Photo" />
 	</div>
       </div><!-- END #index_content1 -->
 
@@ -193,7 +193,9 @@
 	    <div class='box clearfix'>
               <div class="image">
 		<a href="{{ event.url }}">
-		  <img src="/img/events/{{ event.img }}" title="DojoCon Japan {{ event.year }}@ {{ event.title }}" alt="DecaDojo @ {{ event.title }}" />
+		  <img   src="/img/events/{{ event.img }}"
+		         alt="DojoCon Japan {{ event.year }} @ {{ event.venue }}"
+		       title="DojoCon Japan {{ event.year }} @ {{ event.venue }}" />
 		</a>
 	      </div>
 
