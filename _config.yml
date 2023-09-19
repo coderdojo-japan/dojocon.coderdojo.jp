@@ -8,7 +8,7 @@ link_to_youtube:  https://youtube.com/@DojoConJapan
 link_to_twitter:  https://twitter.com/DojoConJapan
 link_to_facebook: https://facebook.com/DojoConJapan
 link_to_github:   https://github.com/coderdojo-japan/dojocon.coderdojo.jp
-copyright: DojoCon Japan 実行委員会 & <a href='https://coderdojo.jp/'>一般社団法人 CoderDojo Japan</a>
+copyright: DojoCon Japan & <a href='https://coderdojo.jp/'>CoderDojo Japan</a>
 
 # Build settings
 plugins:
