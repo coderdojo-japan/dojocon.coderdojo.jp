@@ -1,0 +1,303 @@
+---
+---
+
+<!DOCTYPE html>
+<html class="pc" lang="ja">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <link rel="preload" as="style" href="/style.css">
+    <link rel="preload" as="style" href="/responsive.css">
+    <meta charset="UTF-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+
+    <title>{{ site.title_long }}</title>
+    <meta name="description"         content="{{ site.description }}">
+    <meta property="og:type"         content="website" />
+    <meta property="og:site_name"    content="{{ site.title }}" />
+    <meta property="og:title"        content="{{ site.title }}" />
+    <meta property="og:description"  content="{{ site.description }}" />
+    <meta property="og:url"          content="{{ site.url }}">
+    <meta property="og:image"        content="{{ site.url }}/img/cover.jpg">
+    <meta property="fb:admins"       content="715330868" />
+    <meta property="fb:app_id"       content="805184859580207" />
+
+    <link rel='stylesheet' href='/style.css'      media='all' type='text/css' id='style-css' />
+    <link rel='stylesheet' href='/responsive.css' media='screen and (max-width:1260px)'>
+    <link rel='canonical'  href='{{ site.url }}' />
+    <link rel='shortlink'  href='{{ site.url }}' />
+
+    <script type='text/javascript' src='/js/jquery.js'></script>
+    <script type='text/javascript' src='/js/jquery-migrate.min.js'></script>
+    <script type='text/javascript' src="/js/jquery.easing.1.3.js" async></script>
+    <script type='text/javascript' src="/js/jscript.js" async></script>
+    <script src="https://kit.fontawesome.com/82f32b9df5.js" crossorigin="anonymous"></script>
+
+    <style type="text/css">
+      body { font-size: 15px; }
+      body, input, textarea { font-family: Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif; }
+      .rich_font { font-family: "Times New Roman" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif; font-weight:400; }
+
+      .pc #header .logo        { font-size:21px; }
+      .mobile #header .logo    { font-size:18px; }
+      #header_logo_index .logo { font-size:40px; }
+      #footer_logo_index .logo { font-size:40px; }
+      #header_logo_index .desc { font-size:12px; }
+      #footer_logo .desc       { font-size:12px; }
+      .pc #index_content1 .index_content_header .headline  { font-size:40px; }
+      .pc #index_content1 .index_content_header .desc      { font-size:15px; }
+      .pc #index_content2 .index_content_header .headline  { font-size:40px; }
+      .pc #index_content2 .index_content_header .desc      { font-size:15px; }
+      .pc #index_dis      .index_content_header .headline  { font-size:40px; }
+      .pc #index_dis      .index_content_header .desc      { font-size:15px; }
+      .pc #index_dis      .index_content_header3 .headline { font-size:40px; }
+      .pc #index_dis      .index_content_header3 .desc     { font-size:15px; }
+
+      .post_content a{ color:#2D8696; }
+      a:hover, .pc #global_menu > ul > li.active > a, .pc #global_menu li.current-menu-item > a, .pc #global_menu > ul > li > a:hover, #header_logo .logo a:hover, #bread_crumb li.home a:hover:before, #bread_crumb li a:hover { color:#2D8696; }
+
+      #header_slider .link, #header_video .overlay, #header_youtube .overlay { background:rgba(0,0,0,0.1) url(/img/dot2.png); }
+    </style>
+
+    <link rel="stylesheet" href="/js/slick.css">
+    <script src="/js/slick.min.js"></script>
+    <script type="text/javascript">
+     jQuery(document).ready(function($){
+
+       $('#header_slider').slick({
+	 infinite:       true,
+	 pauseOnHover:   false,
+	 dots:           false,
+	 arrows:         false,
+	 slidesToShow:   1,
+	 slidesToScroll: 1,
+	 adaptiveHeight: false,
+	 autoplay:       true,
+	 fade:           true,
+	 speed:          1000,
+	 autoplaySpeed:  10000
+       });
+
+       $(window).load(function() {
+	 $('#header_logo_index').delay(1000).fadeIn(3000);
+       });
+
+       var header = $('#header');
+       var header_top = header.offset().top;
+       $(window).scroll(function () {
+	 if($(this).scrollTop() > header_top - 200) {
+	   header.addClass('type2');
+	 } else {
+	   header.removeClass('type2');
+	 };
+       });
+     });
+    </script>
+
+    <link rel="stylesheet" href="/js/jquery.mb.YTPlayer.min.css">
+    <script src="/js/jquery.mb.YTPlayer.min.js"></script>
+    <script type="text/javascript">
+     jQuery(document).ready(function($) {
+       $("#youtube_video_player").YTPlayer();
+
+       $("a").bind("focus",function(){ if(this.blur) this.blur(); });
+       $('#return_top a, #header_logo_index a').click(function() {
+  	 var myHref= $(this).attr("href");
+         var myPos = $(myHref).offset().top;
+         $("html,body").animate({scrollTop : myPos}, 1000, 'easeOutExpo');
+  	 return false;
+       });
+       
+       $(window).load(function() {
+  	 $('#header_image .title').delay(1000).fadeIn(3000);
+       });
+     });
+    </script>
+
+    <!--
+	 Settings for Favicon images
+	 https://realfavicongenerator.net
+    -->
+    <link rel="icon" type="image/png" sizes="16x16"   href="/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32"   href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180"      href="/img/apple-touch-icon.png">
+    <link rel="mask-icon"        color="#e2a03a"      href="/img/safari-pinned-tab.svg">
+    <link rel="manifest"                              href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color"             content="#ffffff">
+  </head>
+
+  <body id="body" class="home page-template-default page page-id-5">
+    <div id="top">
+      <!--<div id="header"></div>-->
+      <div id="header_logo_index">
+        <div class="logo_area">
+          <p class="logo"><img src="/img/logo.png" alt="{{ site.title }}" title="{{ site.title }}" width="300px" /></p>
+        </div>
+        <a href="#index_content1" class="link"><span>Start content</span></a>
+      </div>
+
+      <div id="header_youtube">
+	<div class="overlay"></div>
+      </div>
+
+      <div id="youtube_video_player" class="player" data-property="{videoURL:'{{ site.eye_catch_video }}',containment:'#header_youtube',startAt:0,mute:true,autoPlay:true,loop:true,opacity:1}"></div>
+
+      <!-- NOTE: Moved to the end of of 'top'. -->
+      <div id="header">
+	<div id="header_inner">
+	  <div id="header_logo">
+	    <div id="logo_image">
+	      <h1 class="logo">
+		<a href="/" title="{{ site.title }}">
+		  <img src="/img/logo.png" alt="{{ site.title }}" title="{{ site.title }}" width="300px" />
+		</a>
+	      </h1>
+	    </div>
+	  </div>
+	</div>
+      </div>
+    </div><!-- END #top -->
+    
+    <div id="main_contents" class="clearfix">
+      <div id="index_content1">
+	<div class="index_content1">
+	  <div class="index_content_header3">
+	    <h3 class="headline rich_font" style='margin-top: 70px;'>DojoCon Japan とは？</h3>
+            <div class="desc">
+	      <p>DojoCon Japan とは日本の CoderDojo コミュニティメンバーが全国から集まるカンファレンスイベント (CoderDojo Conference) です。2016年に始まり、毎年１回のペースで開催しています。</p>
+	    </div>
+	    <h3 class="headline rich_font" style='margin-top: 70px;'>CoderDojo とは？</h3>
+            <div class="desc">
+	      <p>CoderDojo は7〜17歳を対象とした非営利のプログラミング道場です。2011年にアイルランドで始まり、世界では100カ国・2,000の道場、日本には200以上の道場があります。</p>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="index_content2">
+	  <img src="/img/cover-photo.jpg" title="DecaDojo Cover Photo" alt="DecaDojo Cover Photo" />
+	</div>
+      </div><!-- END #index_content1 -->
+
+      <div id="index_content2">
+	<div class="index_content1">
+	  <div class="index_content_header3" style='margin-top: 70px; margin-bottom: 60px;'>
+	    <h3 class="headline rich_font">DojoCon Japan 開催例</h3>
+          </div>
+
+	  {% for event in site.data.events %}
+	  {% assign index = forloop.index0 | modulo: 3 %}
+	  {% if index == 0 %}
+	  <div class='index_box_list clearfix' style='padding-top: 0px;'>
+	  {% endif %}
+	    <div class='box clearfix'>
+              <div class="image">
+		<a href="{{ event.url }}">
+		  <img src="/img/events/{{ event.img }}" title="DojoCon Japan {{ event.year }}@ {{ event.title }}" alt="DecaDojo @ {{ event.title }}" />
+		</a>
+	      </div>
+
+              <div class="info">
+		<h4 class="headline rich_font">
+		  <a href='{{ event.url }}'>
+		    <center>DojoCon Japan {{ event.year }}</center>
+		  </a>
+		</h4>
+		<center>{{ event.date }} @ {{ event.venue }}</center>
+		<div class="desc" style='margin-top: 15px;'>
+		  <p>
+		    {{ event.description | markdownify }}
+		  </p>
+		</div>
+		<a href="{{ event.url }}" class="link">詳細を見る</a>
+	      </div>
+	    </div>
+	  {% if forloop.last or index == 2 %}
+	  </div><!-- END .index_box -->
+	  {% endif %}
+	  {% endfor %}
+
+	  <div class="index_content_header3" style='text-align:center; margin-bottom: 60px;'>
+	    <h3 class="headline">
+	      <div class="desc" style='text-align:center; font-size: 20px;'>
+		<a href='{{ site.link_to_youtube }}' class='link' style='font-size: 19px;'>
+		  <i class='fa-brands fa-youtube'></i>
+		  YouTube の動画を見る
+		</a>
+		<br>
+		<a href='{{ site.link_to_twitter }}' class='link'>
+		  <i class='fa-brands fa-twitter'></i>
+		  Twitter の投稿を見る
+		</a>
+	      </div>
+	    </h3>
+	  </div>
+	</div><!-- END .index_content1 -->
+      </div><!-- END #index_content2 -->
+
+      <div id="index_dis">
+	<div class="index_content1">
+	  <div class="index_content_header3">
+	    <h3 class="headline rich_font">DojoCon Japan の開催ガイドライン</h3>
+            <div class="desc">
+	      <p>これまでの DojoCon Japan 実行委員長の方々を中心にまとめられた開催ガイドラインがあります。DojoCon Japan の開催に興味ある方にとってお役に立てば幸いです。</p>
+	      <br>
+	      <p></p>
+	    </div>
+	    <h3 class="headline">
+	      <div class="desc" style='text-align:center; font-size: 20px;'>
+		<a href='https://coderdojo.jp/docs/dojocon-japan-guidelines'>
+		  <i class='fad fa-yin-yang'></i>
+		  開催ガイドラインを見る
+		</a>
+	      </div>
+	    </h3>
+	  </div>
+	</div>
+      </div><!-- END #index_dis -->
+    </div><!-- END #main_contents -->
+
+    <div id="footer_wrapper">
+      <div id="footer_top">
+	<div id="footer_top_inner">
+
+	  <!-- footer logo -->
+	  <div id="footer_logo">
+	    <div class="logo_area">
+	      <p class="logo">
+		<img src="/img/logo.png" alt="{{ site.title }}" title="{{ site.title }}" width="300px" />
+	      </p>
+	    </div>
+	  </div>
+
+	  <!-- footer menu -->
+	</div><!-- END #footer_top_inner -->
+      </div><!-- END #footer_top -->
+
+      <div id="footer_bottom">
+	<div id="footer_bottom_inner" class="clearfix">
+	  <!-- footer logo -->
+	  <!-- social button -->
+	  <ul class="clearfix" id="footer_social_link">
+	    <li class="facebook"><a href="{{ site.link_to_facebook }}">Facebook</a></li>
+	    <li class="twitter" ><a href="{{ site.link_to_twitter  }}">Twitter</a></li>
+	    <li class="youtube" ><a href="{{ site.link_to_youtube  }}">YouTube</a></li>
+	  </ul>
+
+	  <!-- footer bottom menu -->
+	  <p style='color: grey; margin-top: 20px; font-size: 9px; text-align: center;'>
+	    各サムネイル画像は、それぞれの実行委員会の著作物となります。
+	  </p>
+	</div><!-- END #footer_bottom_inner -->
+      </div><!-- END #footer_bottom -->
+
+      <p id="copyright">
+	Copyright &copy; {{ site.copyright }}
+      </p>
+    </div><!-- /footer_wrapper -->
+
+    <div id="return_top">
+      <a href="#main_contents"><span>PAGE TOP</span></a>
+    </div>
+  </body>
+</html>
