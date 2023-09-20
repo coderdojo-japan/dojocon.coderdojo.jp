@@ -5,10 +5,11 @@
 これからの DojoCon Japan について考えたり、   
 これまでの DojoCon Japan を一覧したい場面などでご参考になれば嬉しいです 😌💭 ✨
 
+https://dojocon.coderdojo.jp/
+
 [![DojoCon Japan 開催例](https://github.com/coderdojo-japan/dojocon.coderdojo.jp/blob/main/img/screenshot.jpg)](https://dojocon.coderdojo.jp/)
 
-各サムネイル画像は、DojoCon Japan 実行委員会の著作物となります。   
-https://dojocon.coderdojo.jp/
+_※ 各サムネイル画像は、DojoCon Japan 実行委員会の著作物となります。_
 
 -----
 
