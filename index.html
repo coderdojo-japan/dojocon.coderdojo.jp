@@ -34,8 +34,14 @@
 
     <style type="text/css">
       body { font-size: 15px; }
-      body, input, textarea { font-family: Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif; }
-      .rich_font { font-family: "Times New Roman" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif; font-weight:400; }
+      body, input, textarea {
+	font-family: Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+      }
+      .rich_font {
+	font-family: "Times New Roman" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;
+	font-weight: 400;
+	line-height: 1.5em;
+      }
 
       .pc #header .logo        { font-size:21px; }
       .mobile #header .logo    { font-size:18px; }
@@ -181,7 +187,7 @@
 
       <div id="index_content2">
 	<div class="index_content1">
-	  <div class="index_content_header3" style='margin-top: 70px; margin-bottom: 60px;'>
+	  <div class="index_content_header3" style='margin-top: 50px; margin-bottom: 60px;'>
 	    <h3 class="headline rich_font">DojoCon Japan 開催例</h3>
           </div>
 
@@ -190,7 +196,7 @@
 	  {% if index == 0 %}
 	  <div class='index_box_list clearfix' style='padding-top: 0px;'>
 	  {% endif %}
-	    <div class='box clearfix'>
+	    <div class='box clearfix' style='margin-bottom: 50px;'>
               <div class="image">
 		<a href="{{ event.url }}">
 		  <img   src="/img/events/{{ event.img }}"
