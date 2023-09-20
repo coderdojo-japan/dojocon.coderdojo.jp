@@ -1,4 +1,4 @@
-# DojoCon Japan 一覧
+# DojoCon Japan 公式サイト一覧
 
 各年度の DojoCon Japan の概要 + テーマ + 実行委員長による開催に向けた思いなどを一覧できるページです。
 
