@@ -52,6 +52,31 @@ CoderDojo は7〜17歳を対象とした非営利のプログラミング道場�
 
 [`_data`](https://github.com/coderdojo-japan/dojocon.coderdojo.jp/tree/main/_data) ディレクトリ内に `events.yml` という YAML ファイルがあり、この YAML ファイルを修正すると情報を更新できます。
 
+[`_data/events.yml`](https://github.com/coderdojo-japan/dojocon.coderdojo.jp/blob/main/_data/events.yml) ファイルの内容は以下の通りです。
+
+```yml
+# - url:   公式サイトへのURL
+#   img:   サムネイル画像のファイル名 (画像は `img/events/` ディレクトリに置きます)
+#   date:  開催日 (日付は `yyyy/mm/dd (曜日)` 形式で書きます)
+#   venue: 開催地 (都道府県単位)
+#   description: >-
+#     ココに説明文を書きます。一部の Markdown や HTML にも対応しています。
+
+# 例：「DojoCon Japan 2016」の場合
+- url:   https://dojocon2016.coderdojo.jp/
+  img:   2016.webp
+  date:  2016/08/27 (土)
+  venue: 大阪
+  description: >-
+    初開催の DojoCon Japan。THE MORE DOJOS, THE MORE COOL CODERS をテーマに開催。
+      <ul style='list-style: inside;'>
+        <li>国内での CoderDojo に携わるメンターの交流</li>
+        <li>プログラミング教育、コミュニティー運営、アートなどの各分野に関するエキサイティングなスピーカーを揃えたセッション</li>
+        <li>新しいテクノロジーやサービスに触れるショーケース</li>
+      </ul>
+    を中心に構成され、これから日本各地で CoderDojo が増え、それぞれがいっそう楽しく、より地域に根ざし、そしてクリエイティブなものになっていくことで次世代のテクノロジスト育成の促進を目指します。
+```
+
 \[[`_data/events.yml` ファイルを見る](https://github.com/coderdojo-japan/dojocon.coderdojo.jp/blob/main/_data/events.yml)\]
 
 <br>
