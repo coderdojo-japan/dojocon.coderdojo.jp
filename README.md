@@ -15,7 +15,7 @@ _※ 各サムネイル画像は、DojoCon Japan 実行委員会の著作物と�
 
 元々は初期に使っていた dojocon.coderdojo.jp ドメインへのリンクがすべてリンク切れになっていため、リンク切れを修正する目的でした。各 URL に対応するリダイレクトを追加するだけでも十分でしたが、せっかくなので DojoCon Japan を一覧できるサイトにリニューアルしてみた流れになります 🆙✨
 
-なお、個別ページへのリンク切れにも気づき次第対応しています。例えば次のようなリンクも今までは 404 Page Not Found となっていましたが、2016年の DojoCon Japan の各種ページに適切にリダイレクトされるようになっています ↩️✅
+なお、個別ページへのリンク切れにも気づき次第対応しています。例えば次のようなリンクも今までは 404 Page Not Found となっていましたが、2016年の DojoCon Japan の該当するページにリダイレクトされるようになっています ↩️ ✅
 
 - http://dojocon.coderdojo.jp/sponsor/
 - http://dojocon.coderdojo.jp/2016/09/04/coderdojo-japan-was-established.html
