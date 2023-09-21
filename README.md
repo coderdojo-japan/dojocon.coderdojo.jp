@@ -17,8 +17,8 @@ _※ 各サムネイル画像は、DojoCon Japan 実行委員会の著作物と�
 
 なお、個別ページへのリンク切れにも気づき次第対応しています。例えば次のようなリンクも今までは 404 Page Not Found となっていましたが、2016年の DojoCon Japan の該当するページにリダイレクトされるようになっています ↩️ ✅
 
-- http://dojocon.coderdojo.jp/sponsor/
-- http://dojocon.coderdojo.jp/2016/09/04/coderdojo-japan-was-established.html
+- リダイレクトの例: http://dojocon.coderdojo.jp/sponsor/
+- リダイレクトの例: http://dojocon.coderdojo.jp/2016/09/04/coderdojo-japan-was-established.html
 
 [![Google 検索 - "dojocon.coderdojo.jp"](https://github.com/coderdojo-japan/dojocon.coderdojo.jp/blob/main/img/google-search-result.jpg)](https://www.google.com/search?q=%22dojocon.coderdojo.jp%22)
 
