@@ -207,7 +207,7 @@
       <div id="index_content2">
 	<div class="index_content1">
 	  <div class="index_content_header3" style='margin-top: 80px; margin-bottom: 60px;'>
-	    <h3 class="headline rich_font">DojoCon Japan 開催例</h3>
+	    <h3 id='examples' class="headline rich_font">DojoCon Japan 開催例</h3>
           </div>
 
 	  {% for event in site.data.events %}
@@ -217,17 +217,18 @@
 	  {% endif %}
 	    <div class='box clearfix' style='margin-bottom: 50px;'>
               <div class="image">
+		{% assign event_year = event.date | split: '/' | first %}
 		<a href="{{ event.url }}">
 		  <img src="/img/events/{{ event.img }}" loading="lazy"
-		       alt="DojoCon Japan {{ event.year }} @ {{ event.venue }}"
-		     title="DojoCon Japan {{ event.year }} @ {{ event.venue }}" />
+		       alt="DojoCon Japan {{ event_year }} @ {{ event.venue }}"
+		     title="DojoCon Japan {{ event_year }} @ {{ event.venue }}" />
 		</a>
 	      </div>
 
               <div class="info">
 		<h4 class="headline rich_font">
 		  <a href='{{ event.url }}'>
-		    <center>DojoCon Japan {{ event.year }}</center>
+		    <center>DojoCon Japan {{ event_year }}</center>
 		  </a>
 		</h4>
 		<center>{{ event.date }} @ {{ event.venue }}</center>
