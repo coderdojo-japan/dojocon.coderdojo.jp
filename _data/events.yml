@@ -1,5 +1,12 @@
 ---
 
+# url:   公式サイトへのURL
+# img:   サムネイル画像のファイル名 (画像は `img/events/` ディレクトリに置きます)
+# date:  開催日 (日付は `yyyy/mm/dd (曜日)` 形式で書きます)
+# venue: 開催地 (都道府県単位)
+# description: >-
+#   ココに説明文を書きます。一部の Markdown や HTML にも対応しています。
+
 - url:   https://dojocon2016.coderdojo.jp/
   img:   2016.webp
   date:  2016/08/27 (土)
