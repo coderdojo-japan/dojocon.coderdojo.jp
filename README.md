@@ -24,6 +24,38 @@ _※ 各サムネイル画像は、DojoCon Japan 実行委員会の著作物と�
 
 <br>
 
+## :yin_yang: DojoCon Japan とは? CoderDojo とは?
+
+DojoCon Japan とは日本の [CoderDojo](https://github.com/coderdojo-japan) コミュニティメンバーが全国から集まるカンファレンスイベント (CoderDojo Conference) です。2016年に始まり、毎年１回のペースで開催しています。
+
+CoderDojo は7〜17歳を対象とした非営利のプログラミング道場です。2011年にアイルランドで始まり、世界では100カ国・2,000の道場、[日本には220以上の道場](https://coderdojo.jp/)があります。
+
+- DojoCon Japan の開催例を見る: https://dojocon.coderdojo.jp/
+- 日本各地の CoderDojo を見る:  https://coderdojo.jp/
+
+<br>
+
+## :white_check_mark: ブラウザで情報修正を提案できます
+
+情報を更新したい場合は **Webブラウザが一番簡単** だと思います...!! 😆
+
+1. 下記の『更新方法』を参考に、修正を提案したい yml ファイルをクリックする
+2. 画面右にある ✎ アイコン (Fork this project and edit this file) をクリックする
+3. 気になる箇所を修正し、修正内容にタイトルと説明文を付け、Propose file change をクリックする
+4. 修正内容を確認し、問題なければ Create pull request をクリックする
+
+以上で完了です。提案された修正内容は運営チームによって再確認され、問題なければ提案された内容が反映されます。もし修正内容に不具合があっても運営側で気付いて修正するので、まずはお気軽に提案してみてください :wink:
+
+<br>
+
+## :up: 開催情報の更新方法
+
+[`_data`](https://github.com/coderdojo-japan/dojocon.coderdojo.jp/tree/main/_data) ディレクトリ内に `events.yml` という YAML ファイルがあり、この YAML ファイルを修正すると情報を更新できます。
+
+\[[`_data/events.yml` ファイルを見る](https://github.com/coderdojo-japan/dojocon.coderdojo.jp/blob/main/_data/events.yml)\]
+
+<br>
+
 ## :octocat: 関連リポジトリ
 
 - [GitHub - DojoCon Japan リポジトリ一覧](https://github.com/search?q=org%3Acoderdojo-japan+dojocon&type=repositories)
