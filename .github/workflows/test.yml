@@ -25,6 +25,10 @@ jobs:
       with:
         bundler-cache: true
 
+    - name: 🧪 Install gems
+      run: |
+        bundle install
+
     - name: 🔧 Build & Test
       run: |
         JEKYLL_ENV=test bundle exec jekyll build
@@ -49,8 +53,6 @@ jobs:
 
     - name: 🧪 Install gems
       run: |
-        bundle config set with 'test'
-        bundle config set path 'vendor/bundle'
         bundle install
 
     - name: 🔧 Build
