@@ -1,0 +1,69 @@
+name: Daily Update
+
+# NOTE: GitHub Action's scheduler is always set to UTC+0. So 9am should be set at 0am for JST (UTC+9)
+# https://docs.github.com/en/actions/reference/events-that-trigger-workflows#scheduled-events-schedule
+
+# '0 23 * * *' ==  8am in JST (UTC+9)
+# '0 0 * * *'  ==  9am in JST (UTC+9)
+# '0 1 * * *'  == 10am in JST (UTC+9)
+# '59 23 * * *' task will be completed after 9am in JST
+on:
+  schedule:
+    - cron:  '59 20 * * *'
+
+    # [DEBUG ONLY] Every 5 minutes
+    # https://github.blog/changelog/2019-11-01-github-actions-scheduled-jobs-maximum-frequency-is-changing
+    #- cron:  '*/5 * * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Download codes from GitHub
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 2
+
+    - name: 💎 Set up Ruby
+      uses: ruby/setup-ruby@v1
+      #with:
+      #  bundler-cache: true
+        #ruby-version: 3.2 # Not necessary if .ruby-version is given
+
+    - name: 🧪 Install Ruby gems
+      run: |
+        bundle install
+
+    - name: 📊 Update dojo stats of Japan
+      run: |
+        bundle exec ruby update_profile.rb
+
+    - name: 🆙 Update profile if updated
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          git config --global user.name  "Yohei Yasukawa"
+          git config --global user.email "yohei@yasslab.jp"
+          git checkout main
+          git add _data/stats.yml
+          git commit -m '🤖 Update dojo stats'
+          git push origin main
+        fi
+      env:
+        GITHUB_TOKEN:
+
+    - name: 🔧 Build & Test
+      run: |
+        JEKYLL_ENV=production bundle exec jekyll build
+        JEKYLL_ENV=production bundle exec jekyll doctor
+        SKIP_BUILD=true       bundle exec rake test
+
+    - name: 🚀 Deploy to GitHub Pages
+      if:   github.ref == 'refs/heads/main' && job.status == 'success'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir:    ./_site
