@@ -44,7 +44,9 @@ jobs:
 
     - name: 🆙 Update profile if updated
       run: |
+        echo "IS_UPDATED=false"  >> $GITHUB_ENV
         if [ -n "$(git status --porcelain)" ]; then
+          echo "IS_UPDATED=true" >> $GITHUB_ENV
           git config --global user.name  "Yohei Yasukawa"
           git config --global user.email "yohei@yasslab.jp"
           git checkout main
@@ -62,7 +64,7 @@ jobs:
         SKIP_BUILD=true       bundle exec rake test
 
     - name: 🚀 Deploy to GitHub Pages
-      if:   github.ref == 'refs/heads/main' && job.status == 'success'
+      if:   github.ref == 'refs/heads/main' && job.status == 'success' && env.IS_UPDATED == 'true'
       uses: peaceiris/actions-gh-pages@v3
       with:
         personal_token: ${{ secrets.GITHUB_TOKEN }}
