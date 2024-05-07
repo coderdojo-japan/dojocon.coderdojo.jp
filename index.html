@@ -53,6 +53,12 @@
 	line-height: 1.5em;
       }
 
+      i.fa-solid {
+	color: black;
+	padding-right: 10px;
+	font-size: 90%;
+      }
+
       .pc #header .logo        { font-size:21px; }
       .mobile #header .logo    { font-size:18px; }
       #header_logo_index .logo { font-size:40px; }
@@ -185,12 +191,18 @@
       <div id="index_content1">
 	<div class="index_content1">
 	  <div class="index_content_header3">
-	    <h3 class="headline rich_font" style='margin-top: 70px;'>DojoCon Japan とは？</h3>
+	    <h3 class="headline rich_font" style='margin-top: 70px;' id='about'>
+	      <a href='#about'><i class="fa-solid fa-badge-check"></i></a>
+	      DojoCon Japan とは？
+	    </h3>
             <div class="desc">
 	      <p>DojoCon Japan とは日本の CoderDojo コミュニティメンバーが全国から集まるカンファレンスイベント (CoderDojo Conference) です。2016年に始まり、毎年１回のペースで開催しています。</p>
 	    </div>
 
-	    <h3 class="headline rich_font" style='margin-top: 70px;'>CoderDojo とは？</h3>
+	    <h3 class="headline rich_font" style='margin-top: 70px;' id='coderdojo'>
+	      <a href='#coderdojo'><i class="fa-solid fa-yin-yang"></i></a>
+	      CoderDojo とは？
+	    </h3>
             <div class="desc">
 	      <p>CoderDojo は7〜17歳を対象とした非営利のプログラミング道場です。2011年にアイルランドで始まり、世界では100カ国・2,000の道場、<a href='https://coderdojo.jp/'>日本には{{ site.data.stats['active_dojos'] }}以上の道場</a>があります。</p>
 	    </div>
@@ -207,7 +219,10 @@
       <div id="index_content2">
 	<div class="index_content1">
 	  <div class="index_content_header3" style='margin-top: 80px; margin-bottom: 60px;'>
-	    <h3 id='examples' class="headline rich_font">DojoCon Japan 開催例</h3>
+	    <h3 id='examples' class="headline rich_font">
+	      <a href='#examples'><i class="fa-solid fa-magnifying-glass-location"></i></a>
+	      DojoCon Japan 開催例
+	    </h3>
           </div>
 
 	  {% for event in site.data.events %}
@@ -266,7 +281,10 @@
       <div id="index_dis">
 	<div class="index_content1">
 	  <div class="index_content_header3">
-	    <h3 class="headline rich_font">DojoCon Japan の<br class='ignore-pc'>開催ガイドライン</h3>
+	    <h3 id='guidelines' class="headline rich_font">
+	      <a href='#guidelines'><i class="fa-solid fa-list-check"></i></a>
+	      DojoCon Japan の<br class='ignore-pc'>開催ガイドライン
+	    </h3>
             <div class="desc">
 	      <p>これまでの DojoCon Japan 実行委員長の方々を中心にまとめられた開催ガイドラインがあります。DojoCon Japan の開催に興味ある方にとってお役に立てば幸いです。</p>
 	      <br>
