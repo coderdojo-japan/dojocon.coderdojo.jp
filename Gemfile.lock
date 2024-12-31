@@ -29,9 +29,7 @@ GEM
       fiber-storage
     fiber-storage (0.1.0)
     forwardable-extended (2.6.0)
-    google-protobuf (4.26.1-arm64-darwin)
-      rake (>= 13)
-    google-protobuf (4.26.1-x86_64-linux)
+    google-protobuf (4.26.1)
       rake (>= 13)
     hashery (2.1.2)
     html-proofer (5.0.8)
@@ -83,9 +81,9 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.4.0)
-    nokogiri (1.16.4-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.16.4-x86_64-linux)
+    mini_portile2 (2.8.8)
+    nokogiri (1.16.4)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -136,4 +134,4 @@ DEPENDENCIES
   webrick
 
 BUNDLED WITH
-   2.4.19
+   2.6.2
