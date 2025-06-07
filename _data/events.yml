@@ -7,6 +7,17 @@
 # description: >-
 #   ココに説明文を書きます。一部の Markdown や HTML にも対応しています。
 
+- url:   https://dojocon2025.coderdojo.jp/
+  img:   coderdojo.webp
+  date:  2025/10/25 (土)
+  venue: 福岡
+  description: >-
+    "Inspire Next 〜好奇心に火をつけよう〜<br>
+    <br>
+    【開催場所 福岡県久留米市 久留米シティプラザ】<br>
+    <br>
+    SAVE THE DATE...
+
 - url:   https://dojocon2024.coderdojo.jp/
   img:   2024.webp
   date:  2024/09/15 (日)
