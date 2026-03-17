@@ -527,16 +527,16 @@ a:hover { text-decoration:underline; }
   width:17px; height:17px; line-height:17px;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
 }
-#footer_social_link li.facebook:before { content:'\e902'; }
-#footer_social_link li.twitter:before  { content:'\e904'; }
-#footer_social_link li.youtube:before  { content:'\f167'; }
-#footer_social_link li.youtube2:before { content:'\ea9e'; }
-#footer_social_link li.github:before   { content:'\e90c'; }
-#footer_social_link li.rss:before      { content:'\e90b'; }
-#footer_social_link li.insta:before    { content:'\ea92'; top:11px; }
-#footer_social_link li.pint:before     { content:'\e905'; top:11px; }
-#footer_social_link li.flickr:before   { content:'\eaa4'; top:11px; }
-#footer_social_link li.tumblr:before   { content:'\eab9'; top:11px; }
+#footer_social_link li.facebook:before { content:'\f09a'; font-family:'Font Awesome 6 Brands'; }
+#footer_social_link li.twitter:before  { content:'\e61b'; font-family:'Font Awesome 6 Brands'; }
+#footer_social_link li.youtube:before  { content:'\f167'; font-family:'Font Awesome 6 Brands'; }
+#footer_social_link li.youtube2:before { content:'\f167'; font-family:'Font Awesome 6 Brands'; }
+#footer_social_link li.github:before   { content:'\f09b'; font-family:'Font Awesome 6 Brands'; }
+#footer_social_link li.rss:before      { content:'\f09e'; font-family:'Font Awesome 6 Free'; font-weight:900; }
+#footer_social_link li.insta:before    { content:'\f16d'; font-family:'Font Awesome 6 Brands'; top:11px; }
+#footer_social_link li.pint:before     { content:'\f0d2'; font-family:'Font Awesome 6 Brands'; top:11px; }
+#footer_social_link li.flickr:before   { content:'\f16e'; font-family:'Font Awesome 6 Brands'; top:11px; }
+#footer_social_link li.tumblr:before   { content:'\f173'; font-family:'Font Awesome 6 Brands'; top:11px; }
 #footer_social_link li.facebook:hover:before { color:#333333; } // { color:#3B5998; }
 #footer_social_link li.twitter:hover:before  { color:#333333; } // { color:#16b9dc; }
 #footer_social_link li.youtube:hover:before  { color:#333333; } // { color: red; }
