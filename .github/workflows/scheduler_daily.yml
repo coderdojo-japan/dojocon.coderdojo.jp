@@ -21,6 +21,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      updated: ${{ steps.update.outputs.updated }}
 
     steps:
     - name: 📥 Download codes from GitHub
@@ -43,10 +45,12 @@ jobs:
         bundle exec ruby update_profile.rb
 
     - name: 🆙 Update profile if updated
+      id:   update
       run: |
         echo "IS_UPDATED=false"  >> $GITHUB_ENV
         if [ -n "$(git status --porcelain)" ]; then
           echo "IS_UPDATED=true" >> $GITHUB_ENV
+          echo "updated=true"    >> $GITHUB_OUTPUT
           git config --global user.name  "Yohei Yasukawa"
           git config --global user.email "yohei@yasslab.jp"
           git checkout main
@@ -63,9 +67,29 @@ jobs:
         JEKYLL_ENV=production bundle exec jekyll doctor
         SKIP_BUILD=true       bundle exec rake test
 
-    - name: 🚀 Deploy to GitHub Pages
+    # 公式の Pages の action で配る。以前は第三者の peaceiris/actions-gh-pages に書き込みのトークンを渡し、
+    # gh-pages ブランチへ push していた。ここではビルドした _site を成果物として上げ、下の pages ジョブが配る
+    - name: 📦 Upload site for GitHub Pages
       if:   github.ref == 'refs/heads/main' && job.status == 'success' && env.IS_UPDATED == 'true'
-      uses: peaceiris/actions-gh-pages@v4
+      uses: actions/upload-pages-artifact@v5
       with:
-        personal_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir:    ./_site
+        path: ./_site
+
+  pages:
+    name: 🚀 Deploy to GitHub Pages
+    needs: build
+    if:   github.ref == 'refs/heads/main' && needs.build.outputs.updated == 'true'
+    runs-on: ubuntu-latest
+    # test.yml の push と重ならないよう、Pages への配布は 1 つずつ動かす
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    permissions:
+      pages:    write  # Pages に配る
+      id-token: write  # 配布元がこの workflow であることを確かめる
+    environment:
+      name: github-pages
+      url:  ${{ steps.deployment.outputs.page_url }}
+    steps:
+    - id:   deployment
+      uses: actions/deploy-pages@v5
